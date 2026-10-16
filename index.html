@@ -1,923 +1,220 @@
-
-
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Emmanuel C. Ugwuanyi's Business Analytics portfolio, showcasing Excel, Power BI, SQL and business process analysis.">
-
-  <title>Emmanuel C. Ugwuanyi | Business Analytics Portfolio</title>
-
+  <title>Emmanuel C. Ugwuanyi | Business Analyst</title>
+  <meta name="description" content="Business Analytics portfolio showcasing Excel, Power BI, SQL and gap analysis.">
   <style>
-
     :root {
-
       --navy: #101c35;
-
       --blue: #3563e9;
-
       --light: #f4f7fc;
-
       --text: #25324a;
-
       --muted: #68758b;
-
       --white: #ffffff;
-
     }
-
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-
       margin: 0;
-
       font-family: Arial, Helvetica, sans-serif;
-
       background: var(--light);
-
       color: var(--text);
-
-      line-height: 1.7;
-
+      line-height: 1.65;
     }
-
-    a { color: inherit; text-decoration: none; }
-
-    .container {
-
-      width: min(1100px, 90%);
-
-      margin: auto;
-
-    }
-
-    header {
-
+    a { color: var(--blue); text-decoration: none; }
+    .nav {
       background: var(--navy);
-
       color: white;
-
-      padding: 18px 0;
-
-    }
-
-    nav {
-
+      padding: 16px 7%;
       display: flex;
-
-      justify-content: space-between;
-
       align-items: center;
-
-      flex-wrap: wrap;
-
-      gap: 15px;
-
-    }
-
-    .brand { font-size: 19px; font-weight: 800; }
-
-    nav .links {
-
-      display: flex;
-
+      justify-content: space-between;
       gap: 18px;
-
       flex-wrap: wrap;
-
-      font-size: 14px;
-
     }
-
-    nav a:hover { color: #a9c1ff; }
-
+    .brand { color: white; font-weight: 700; font-size: 1.05rem; }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .nav-links a { color: #e5ebf7; font-size: .9rem; }
     .hero {
-
-      background: linear-gradient(135deg, #101c35, #203d70);
-
-      color: white;
-
-      padding: 90px 0;
-
-    }
-
-    .hero-content { max-width: 780px; }
-
-    .eyebrow {
-
-      color: #a9c1ff;
-
-      text-transform: uppercase;
-
-      letter-spacing: 2px;
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-    }
-
-    h1 {
-
-      font-size: clamp(38px, 7vw, 66px);
-
-      line-height: 1.12;
-
-      margin: 15px 0;
-
-    }
-
-    .hero p {
-
-      max-width: 670px;
-
-      color: #e0e8f8;
-
-      font-size: 18px;
-
-    }
-
-    .button {
-
-      display: inline-block;
-
-      background: var(--blue);
-
-      color: white;
-
-      padding: 12px 20px;
-
-      border-radius: 7px;
-
-      margin: 12px 8px 0 0;
-
-      font-weight: bold;
-
-    }
-
-    .button.secondary {
-
-      background: transparent;
-
-      border: 1px solid #a9c1ff;
-
-    }
-
-    section { padding: 65px 0; }
-
-    .section-heading { margin-bottom: 28px; }
-
-    .section-heading h2 {
-
-      font-size: 30px;
-
-      color: var(--navy);
-
-      margin-bottom: 6px;
-
-    }
-
-    .section-heading p, .muted { color: var(--muted); }
-
-    .about-grid, .cards, .skills-grid {
-
-      display: grid;
-
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-
-      gap: 22px;
-
-    }
-
-    .card {
-
-      background: var(--white);
-
-      padding: 25px;
-
-      border-radius: 13px;
-
-      border: 1px solid #e5eaf3;
-
-      box-shadow: 0 5px 20px rgba(16, 28, 53, 0.04);
-
-    }
-
-    .card h3 { margin-top: 0; color: var(--navy); }
-
-    .tag {
-
-      display: inline-block;
-
-      background: #eaf0ff;
-
-      color: #2448a7;
-
-      border-radius: 5px;
-
-      padding: 5px 9px;
-
-      font-size: 12px;
-
-      margin: 4px 3px 0 0;
-
-    }
-
-    .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-
-    .skill-card { border-top: 4px solid var(--blue); }
-
-    .project-label {
-
-      color: var(--blue);
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1px;
-
-    }
-
-    .timeline-item {
-
-      border-left: 3px solid #d8e2ff;
-
-      padding: 0 0 25px 22px;
-
-      margin-left: 7px;
-
-    }
-
-    .timeline-item h3 { margin: 0; }
-
-    .timeline-item .date {
-
-      color: var(--blue);
-
-      font-size: 13px;
-
-      font-weight: bold;
-
-    }
-
-    .contact {
-
       background: var(--navy);
-
       color: white;
-
-      text-align: center;
-
+      padding: 64px 7% 76px;
     }
-
-    .contact h2 { color: white; }
-
-    .contact p { color: #dce5f7; }
-
-    footer {
-
-      background: #0a1327;
-
-      color: #c7d1e4;
-
-      text-align: center;
-
-      padding: 20px;
-
-      font-size: 13px;
-
+    .hero-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      gap: 36px;
     }
-
-    @media (max-width: 700px) {
-
-      nav { align-items: flex-start; }
-
-      nav .links { gap: 12px; }
-
-      .about-grid, .cards, .skills-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .hero { padding: 65px 0; }
-
-      section { padding: 45px 0; }
-
+    .profile {
+      width: 155px;
+      height: 155px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      flex-shrink: 0;
     }
-
+    .eyebrow { color: #b9cbff; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: .78rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.15; margin: 8px 0 12px; }
+    .hero p { color: #e0e7f5; max-width: 650px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+    .btn { display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 700; }
+    .btn-primary { background: var(--blue); color: white; }
+    .btn-secondary { border: 1px solid #aebfe0; color: white; }
+    main { max-width: 1100px; margin: auto; padding: 28px 24px 60px; }
+    section { padding: 30px 0; scroll-margin-top: 20px; }
+    h2 { color: var(--navy); font-size: 1.8rem; margin: 0 0 16px; }
+    .intro { max-width: 800px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      background: white;
+      padding: 23px;
+      border-radius: 14px;
+      border: 1px solid #e1e7f1;
+      box-shadow: 0 5px 18px rgba(16,28,53,.04);
+    }
+    .card h3 { color: var(--navy); margin-top: 0; }
+    .tag {
+      display: inline-block;
+      background: #eaf0ff;
+      color: #244ac0;
+      border-radius: 6px;
+      padding: 4px 9px;
+      margin: 4px 4px 0 0;
+      font-size: .82rem;
+    }
+    .muted { color: var(--muted); }
+    footer { background: var(--navy); color: #e0e7f5; padding: 28px 7%; text-align: center; }
+    footer a { color: white; }
+    @media (max-width: 650px) {
+      .hero-inner { flex-direction: column; align-items: flex-start; }
+      .profile { width: 125px; height: 125px; }
+      .grid { grid-template-columns: 1fr; }
+      .nav { padding: 16px 5%; }
+      main { padding-left: 5%; padding-right: 5%; }
+    }
   </style>
-
 </head>
-
 <body>
-
-  <header>
-
-    <div class="container">
-
-      <nav>
-
-        <a class="brand" href="#home">ECU. Analytics</a>
-
-        <div class="links">
-
-          <a href="#about">About</a>
-
-          <a href="#skills">Skills</a>
-
-          <a href="#projects">Projects</a>
-
-          <a href="#experience">Experience</a>
-
-          <a href="#contact">Contact</a>
-
-        </div>
-
-      </nav>
-
+  <nav class="nav">
+    <a class="brand" href="#home">Emmanuel Ugwuanyi</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <img class="profile"
+        src="./Github%20profile%20pix.jpeg"
+        alt="Emmanuel C. Ugwuanyi"
+        onerror="this.style.display='none'">
+      <div>
+        <div class="eyebrow">Business Analytics Portfolio</div>
+        <h1>Emmanuel C. Ugwuanyi</h1>
+        <p><strong>Business Analyst | Data-Driven Problem Solver</strong></p>
+        <p>I use data analysis and structured problem-solving to understand business challenges, identify gaps and support better decisions.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">Explore My Projects</a>
+          <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-
-    <section class="hero" id="home">
-
-      <div class="container hero-content">
-
-        <div class="eyebrow">Business Analytics | Data | Strategy</div>
-
-        <img src="Github%20profile%20pix.jpeg"
-
-     alt="Emmanuel C. Ugwuanyi"
-
-     style="width:140px;height:140px;object-fit:cover;border-radius:50%;">
-
-        <h1>Emmanuel C. Ugwuanyi</h1>
-
-        <h2>Aspiring Business Analyst</h2>
-
-        <p>
-
-          I am developing my expertise in Business Analytics to turn data
-
-          into meaningful insights, improve business processes and support
-
-          informed decision-making. I combine a background in marketing,
-
-          international business and customer-facing operations with a
-
-          growing toolkit in data analysis.
-
-        </p>
-
-        <a class="button" href="#projects">Explore My Projects</a>
-
-        <a class="button secondary" href="#contact">Get In Touch</a>
-
-      </div>
-
-    </section>
-
     <section id="about">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>About Me</h2>
-
-          <p>Business knowledge meets analytical thinking.</p>
-
-        </div>
-
-        <div class="about-grid">
-
-          <div class="card">
-
-            <h3>My Profile</h3>
-
-            <p>
-
-              My academic background in Marketing and International Business
-
-              has strengthened my understanding of customers, organisations
-
-              and business strategy. I am now building practical Business
-
-              Analytics skills to investigate problems, interpret data and
-
-              identify opportunities for improvement.
-
-            </p>
-
-            <p>
-
-              My experience in customer service and healthcare has also
-
-              developed my communication, teamwork, organisation and
-
-              problem-solving skills.
-
-            </p>
-
-          </div>
-
-          <div class="card">
-
-            <h3>My Career Focus</h3>
-
-            <p>
-
-              I am interested in business analysis, data-driven decision-making,
-
-              process improvement, reporting and operational performance.
-
-            </p>
-
-            <p>
-
-              My goal is to connect business needs with evidence-based
-
-              recommendations that create measurable value.
-
-            </p>
-
-            <span class="tag">Business Analysis</span>
-
-            <span class="tag">Data Insights</span>
-
-            <span class="tag">Process Improvement</span>
-
-            <span class="tag">Problem Solving</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
+      <h2>About Me</h2>
+      <p class="intro">I am developing my Business Analytics skills, with a focus on transforming business questions into clear analysis and practical recommendations. My interests include reporting, process improvement, requirements analysis and data-informed decision-making.</p>
     </section>
 
     <section id="skills">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>Technical Skills</h2>
-
-          <p>Tools and methods I am learning and developing.</p>
-
-        </div>
-
-        <div class="skills-grid">
-
-          <div class="card skill-card">
-
-            <h3>Microsoft Excel</h3>
-
-            <p>Working with spreadsheets, organising data, formulas and
-
-              developing analytical reports and dashboards.</p>
-
-            <span class="tag">Data Analysis</span>
-
-            <span class="tag">Dashboards</span>
-
-          </div>
-
-          <div class="card skill-card">
-
-            <h3>Power BI</h3>
-
-            <p>Developing skills in data visualisation, interactive reports
-
-              and communicating business performance through visuals.</p>
-
-            <span class="tag">Visualisation</span>
-
-            <span class="tag">Reporting</span>
-
-          </div>
-
-          <div class="card skill-card">
-
-            <h3>SQL</h3>
-
-            <p>Learning to query relational databases, retrieve information,
-
-              filter records and analyse structured datasets.</p>
-
-            <span class="tag">SQL</span>
-
-            <span class="tag">PostgreSQL</span>
-
-          </div>
-
-          <div class="card skill-card">
-
-            <h3>Gap Analysis</h3>
-
-            <p>Comparing current performance with desired outcomes to
-
-              identify gaps, root causes and improvement opportunities.</p>
-
-            <span class="tag">Current State</span>
-
-            <span class="tag">Future State</span>
-
-          </div>
-
-          <div class="card skill-card">
-
-            <h3>Business Analysis</h3>
-
-            <p>Developing knowledge of business problems, requirements,
-
-              stakeholder needs and evidence-based decision processes.</p>
-
-            <span class="tag">Requirements</span>
-
-            <span class="tag">Stakeholders</span>
-
-          </div>
-
-          <div class="card skill-card">
-
-            <h3>Business Communication</h3>
-
-            <p>Applying marketing and international business knowledge to
-
-              understand business objectives and communicate findings clearly.</p>
-
-            <span class="tag">Strategy</span>
-
-            <span class="tag">Communication</span>
-
-          </div>
-
-        </div>
-
+      <h2>Skills & Tools</h2>
+      <div class="card">
+        <span class="tag">Microsoft Excel</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Gap Analysis</span>
+        <span class="tag">Data Visualisation</span>
+        <span class="tag">Business Process Analysis</span>
+        <span class="tag">Requirements Analysis</span>
+        <span class="tag">Problem Solving</span>
       </div>
-
     </section>
 
     <section id="projects">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>Projects & Case Studies</h2>
-
-          <p>Business problems I am exploring through analytical methods.</p>
-
-        </div>
-
-        <div class="cards">
-
-          <article class="card">
-
-            <div class="project-label">Business Analysis Case Study</div>
-
-            <h3>Microfinance Account Opening Process</h3>
-
-            <p>
-
-              A learning case study exploring delays and customer drop-off
-
-              across account opening, KYC verification and account activation.
-
-            </p>
-
-            <p><strong>Analytical approach:</strong> Map the current process,
-
-              conduct gap analysis, identify bottlenecks and propose measurable
-
-              improvements to status updates and processing times.</p>
-
-            <span class="tag">Gap Analysis</span>
-
-            <span class="tag">Process Mapping</span>
-
-            <span class="tag">KPIs</span>
-
-          </article>
-
-          <article class="card">
-
-            <div class="project-label">Requirements & Process Design</div>
-
-            <h3>Laundromat Booking Application</h3>
-
-            <p>
-
-              A learning case study for a six-branch laundromat business
-
-              replacing a paper-based machine booking planner with a digital
-
-              booking process.
-
-            </p>
-
-            <p><strong>Analytical approach:</strong> Explore user requirements,
-
-              machine availability, booking conflicts and the information
-
-              needed to support better scheduling.
-
-            </p>
-
-            <span class="tag">Requirements</span>
-
-            <span class="tag">Workflow</span>
-
-            <span class="tag">Process Improvement</span>
-
-          </article>
-
-          <article class="card">
-
-            <div class="project-label">Data Analytics Practice</div>
-
-            <h3>Excel Data Analysis & Dashboard</h3>
-
-            <p>
-
-              A portfolio project to organise a sample dataset, analyse
-
-              performance indicators and present findings in a clear dashboard.
-
-            </p>
-
-            <p><strong>Planned deliverables:</strong> Cleaned dataset,
-
-              summary metrics, charts and actionable business observations.
-
-            </p>
-
-            <span class="tag">Excel</span>
-
-            <span class="tag">KPIs</span>
-
-            <span class="tag">Dashboard</span>
-
-          </article>
-
-          <article class="card">
-
-            <div class="project-label">Data Visualisation Practice</div>
-
-            <h3>Power BI Business Performance Report</h3>
-
-            <p>
-
-              A planned report using sample business data to explore trends,
-
-              compare categories and communicate performance through
-
-              interactive visualisations.
-
-            </p>
-
-            <p><strong>Planned deliverables:</strong> Data model, report
-
-              visuals and a concise summary of findings.
-
-            </p>
-
-            <span class="tag">Power BI</span>
-
-            <span class="tag">Data Visualisation</span>
-
-            <span class="tag">Insights</span>
-
-          </article>
-
-        </div>
-
-        <p class="muted">
-
-          Note: Case studies and planned projects are presented as learning
-
-          work, not as completed client engagements. Project outputs can be
-
-          added here as they become available.
-
-        </p>
-
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Microfinance Account Opening Gap Analysis</h3>
+          <p>Analysed a sample account-opening process covering registration, KYC verification and account activation. Identified delays, manual follow-ups and gaps in status tracking.</p>
+          <p><strong>Approach:</strong> Current-state review, gap analysis and prioritised recommendations.</p>
+          <p class="muted">Case study · Business Process Analysis</p>
+        </article>
+        <article class="card">
+          <h3>Business Performance Dashboard</h3>
+          <p>A project space for presenting performance indicators, trends and insights using Excel or Power BI.</p>
+          <p><strong>Focus:</strong> Data preparation, KPI reporting and actionable findings.</p>
+          <p class="muted">Add your completed dashboard and verified findings here.</p>
+        </article>
+        <article class="card">
+          <h3>SQL Data Exploration</h3>
+          <p>A project space for demonstrating SQL queries to filter, summarise and analyse structured data.</p>
+          <p><strong>Focus:</strong> SELECT, WHERE, GROUP BY, joins and aggregations.</p>
+          <p class="muted">Add your dataset, queries and results when ready.</p>
+        </article>
+        <article class="card">
+          <h3>Process Improvement Case Study</h3>
+          <p>Document a business problem, map the current process, identify root causes and recommend measurable improvements.</p>
+          <p class="muted">Add a real or clearly labelled practice case study.</p>
+        </article>
       </div>
-
-    </section>
-
-    <section id="education">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>Education & Development</h2>
-
-          <p>Academic foundations and continuous learning.</p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="timeline-item">
-
-            <div class="date">Postgraduate Education</div>
-
-            <h3>MSc International Business</h3>
-
-            <p>University of Dundee</p>
-
-          </div>
-
-          <div class="timeline-item">
-
-            <div class="date">Undergraduate Education</div>
-
-            <h3>BSc Marketing</h3>
-
-            <p>University of Nigeria, Nsukka</p>
-
-          </div>
-
-          <div class="timeline-item">
-
-            <div class="date">National Diploma</div>
-
-            <h3>Marketing</h3>
-
-            <p>Federal Polytechnic Idah</p>
-
-          </div>
-
-          <div class="timeline-item">
-
-            <div class="date">Professional Development</div>
-
-            <h3>Business Analytics</h3>
-
-            <p>Developing practical skills in Excel, Power BI, SQL and
-
-              business analysis methods.</p>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
 
     <section id="experience">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>Professional Experience</h2>
-
-          <p>Transferable skills gained across different working environments.</p>
-
-        </div>
-
-        <div class="card">
-
-          <div class="timeline-item">
-
-            <h3>Senior Healthcare Assistant</h3>
-
-            <p>
-
-              Supporting care delivery, maintaining records, communicating
-
-              with colleagues and contributing to safe, organised daily
-
-              operations.
-
-            </p>
-
-          </div>
-
-          <div class="timeline-item">
-
-            <h3>Passenger Service Executive — Air Peace</h3>
-
-            <p>
-
-              Customer-facing aviation experience involving passenger
-
-              assistance, service coordination and communication.
-
-            </p>
-
-          </div>
-
-          <div class="timeline-item">
-
-            <h3>Sales Representative / Executive</h3>
-
-            <p>
-
-              Sales experience supporting customer relationships,
-
-              product communication and day-to-day business activities.
-
-            </p>
-
-          </div>
-
-        </div>
-
+      <h2>Professional Experience</h2>
+      <div class="card">
+        <h3>Senior Health Care Assistant</h3>
+        <p class="muted">Care sector · United Kingdom</p>
+        <p>Experience working in a structured, people-focused environment, following procedures, maintaining accurate records, communicating with colleagues and responding to changing needs.</p>
+        <p>I aim to transfer these strengths into business analysis through clear documentation, stakeholder communication and continuous improvement.</p>
       </div>
-
+      <p class="muted">Add other relevant roles, employers and dates after checking your CV for accuracy.</p>
     </section>
 
-    <section id="contact" class="contact">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <h2>Let's Connect</h2>
-
-          <p>
-
-            I welcome opportunities to learn, collaborate and grow in
-
-            Business Analytics and Business Analysis.
-
-          </p>
-
-        </div>
-
-        <p>Based in the United Kingdom</p>
-
-        <p>
-
-          Email:
-
-          <a href="mailto:YOUR-EMAIL@example.com">
-
-            Add your email address
-
-          </a>
-
-        </p>
-
-        <p>
-
-          LinkedIn:
-
-          <a href="https://www.linkedin.com/" target="_blank"
-
-             rel="noopener noreferrer">Visit LinkedIn</a>
-
-        </p>
-
-        <p class="muted">
-
-          Replace the placeholder email with your professional email address.
-
-          Add your personal LinkedIn profile URL when ready.
-
-        </p>
-
+    <section id="education">
+      <h2>Education & Training</h2>
+      <div class="card">
+        <h3>MSc International Business</h3>
+        <p>University of Dundee</p>
+        <h3>BSc Marketing</h3>
+        <p>University of Nigeria</p>
+        <h3>Business Analytics Training</h3>
+        <p>Developing practical skills in Excel, Power BI, SQL and Gap Analysis.</p>
       </div>
-
     </section>
 
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>I welcome opportunities to discuss Business Analyst and junior analytics roles.</p>
+        <p><strong>Email:</strong> Replace this text with your professional email address.</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Add your LinkedIn profile URL</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/emmynuel94" target="_blank" rel="noopener noreferrer">github.com/emmynuel94</a></p>
+      </div>
+    </section>
   </main>
 
   <footer>
-
-    <p>© <span id="year"></span> Emmanuel C. Ugwuanyi | Business Analytics Portfolio</p>
-
-    <p>Built with HTML and CSS · Hosted on GitHub Pages</p>
-
+    <p>© 2026 Emmanuel C. Ugwuanyi · Business Analytics Portfolio</p>
   </footer>
-
-  <script>
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-  </script>
-
 </body>
-
 </html>
