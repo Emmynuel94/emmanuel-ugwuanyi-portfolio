@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emmanuel C. Ugwuanyi | Business Analyst</title>
-  <meta name="description" content="Business Analytics portfolio showcasing Excel, Power BI, SQL and gap analysis.">
+  <meta name="description" content="Emmanuel C. Ugwuanyi's Business Analytics portfolio showcasing business analysis, Excel, Power BI, SQL and gap analysis.">
+  <title>Emmanuel C. Ugwuanyi | Business Analyst Portfolio</title>
+
   <style>
     :root {
       --navy: #101c35;
@@ -14,93 +15,238 @@
       --muted: #68758b;
       --white: #ffffff;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--light);
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.7;
     }
-    a { color: var(--blue); text-decoration: none; }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .nav {
       background: var(--navy);
-      color: white;
-      padding: 16px 7%;
+      padding: 17px 7%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      align-items: center;
       flex-wrap: wrap;
+      gap: 15px;
     }
-    .brand { color: white; font-weight: 700; font-size: 1.05rem; }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; }
-    .nav-links a { color: #e5ebf7; font-size: .9rem; }
+
+    .brand {
+      color: var(--white);
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: 0.9rem;
+    }
+
     .hero {
       background: var(--navy);
-      color: white;
-      padding: 64px 7% 76px;
+      color: var(--white);
+      padding: 65px 7% 75px;
     }
+
     .hero-inner {
       max-width: 1100px;
       margin: auto;
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 38px;
     }
+
     .profile {
       width: 155px;
       height: 155px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid white;
+      border: 4px solid var(--white);
       flex-shrink: 0;
     }
-    .eyebrow { color: #b9cbff; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: .78rem; }
-    h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.15; margin: 8px 0 12px; }
-    .hero p { color: #e0e7f5; max-width: 650px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
-    .btn { display: inline-block; padding: 11px 18px; border-radius: 8px; font-weight: 700; }
-    .btn-primary { background: var(--blue); color: white; }
-    .btn-secondary { border: 1px solid #aebfe0; color: white; }
-    main { max-width: 1100px; margin: auto; padding: 28px 24px 60px; }
-    section { padding: 30px 0; scroll-margin-top: 20px; }
-    h2 { color: var(--navy); font-size: 1.8rem; margin: 0 0 16px; }
-    .intro { max-width: 800px; }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+
+    .eyebrow {
+      color: #b9cbff;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.2;
+      margin: 8px 0;
+    }
+
+    .hero p {
+      color: #e0e7f5;
+      max-width: 650px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      border: 1px solid #aebfe0;
+      color: var(--white);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 24px 60px;
+    }
+
+    section {
+      padding: 30px 0;
+      scroll-margin-top: 20px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 1.8rem;
+      margin: 0 0 18px;
+    }
+
+    h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .intro {
+      max-width: 850px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
     .card {
-      background: white;
-      padding: 23px;
+      background: var(--white);
+      padding: 24px;
       border-radius: 14px;
       border: 1px solid #e1e7f1;
-      box-shadow: 0 5px 18px rgba(16,28,53,.04);
+      box-shadow: 0 5px 18px rgba(16, 28, 53, 0.05);
     }
-    .card h3 { color: var(--navy); margin-top: 0; }
+
     .tag {
       display: inline-block;
       background: #eaf0ff;
       color: #244ac0;
       border-radius: 6px;
-      padding: 4px 9px;
-      margin: 4px 4px 0 0;
-      font-size: .82rem;
+      padding: 5px 10px;
+      margin: 4px 4px 4px 0;
+      font-size: 0.85rem;
     }
-    .muted { color: var(--muted); }
-    footer { background: var(--navy); color: #e0e7f5; padding: 28px 7%; text-align: center; }
-    footer a { color: white; }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid #dbe3f1;
+      border-radius: 8px;
+      background: var(--white);
+      font-weight: bold;
+    }
+
+    footer {
+      background: var(--navy);
+      color: #e0e7f5;
+      text-align: center;
+      padding: 26px 7%;
+    }
+
     @media (max-width: 650px) {
-      .hero-inner { flex-direction: column; align-items: flex-start; }
-      .profile { width: 125px; height: 125px; }
-      .grid { grid-template-columns: 1fr; }
-      .nav { padding: 16px 5%; }
-      main { padding-left: 5%; padding-right: 5%; }
+      .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile {
+        width: 125px;
+        height: 125px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        padding: 16px 5%;
+      }
+
+      main {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <nav class="nav">
     <a class="brand" href="#home">Emmanuel Ugwuanyi</a>
+
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -113,31 +259,58 @@
 
   <header class="hero" id="home">
     <div class="hero-inner">
-      <img class="profile"
+
+      <img
+        class="profile"
         src="./Github%20profile%20pix.jpeg"
         alt="Emmanuel C. Ugwuanyi"
         onerror="this.style.display='none'">
+
       <div>
         <div class="eyebrow">Business Analytics Portfolio</div>
+
         <h1>Emmanuel C. Ugwuanyi</h1>
-        <p><strong>Business Analyst | Data-Driven Problem Solver</strong></p>
-        <p>I use data analysis and structured problem-solving to understand business challenges, identify gaps and support better decisions.</p>
+
+        <p><strong>Business Analyst | Business Analytics</strong></p>
+
+        <p>
+          I use analytical thinking, structured problem-solving and
+          data-driven insights to understand business challenges,
+          identify process gaps and support better decisions.
+        </p>
+
         <div class="buttons">
           <a class="btn btn-primary" href="#projects">Explore My Projects</a>
           <a class="btn btn-secondary" href="#contact">Contact Me</a>
         </div>
       </div>
+
     </div>
   </header>
 
   <main>
+
     <section id="about">
       <h2>About Me</h2>
-      <p class="intro">I am developing my Business Analytics skills, with a focus on transforming business questions into clear analysis and practical recommendations. My interests include reporting, process improvement, requirements analysis and data-informed decision-making.</p>
+
+      <p class="intro">
+        I am developing my Business Analytics expertise, with a focus on
+        turning business questions into structured analysis and practical
+        recommendations. My interests include business process analysis,
+        reporting, requirements analysis, gap analysis and continuous
+        improvement.
+      </p>
+
+      <p class="intro">
+        I bring experience from a people-focused professional environment
+        and am building practical technical skills to support evidence-based
+        business decisions.
+      </p>
     </section>
 
     <section id="skills">
       <h2>Skills & Tools</h2>
+
       <div class="card">
         <span class="tag">Microsoft Excel</span>
         <span class="tag">Power BI</span>
@@ -147,74 +320,185 @@
         <span class="tag">Business Process Analysis</span>
         <span class="tag">Requirements Analysis</span>
         <span class="tag">Problem Solving</span>
+        <span class="tag">Reporting</span>
+        <span class="tag">Decision Support</span>
       </div>
     </section>
 
     <section id="projects">
-      <h2>Featured Projects</h2>
+      <h2>Projects</h2>
+
       <div class="grid">
+
         <article class="card">
-          <h3>Microfinance Account Opening Gap Analysis</h3>
-          <p>Analysed a sample account-opening process covering registration, KYC verification and account activation. Identified delays, manual follow-ups and gaps in status tracking.</p>
-          <p><strong>Approach:</strong> Current-state review, gap analysis and prioritised recommendations.</p>
-          <p class="muted">Case study · Business Process Analysis</p>
+          <h3>Microfinance Account Opening — Gap Analysis</h3>
+
+          <p>
+            A case study examining an account-opening process involving
+            registration, KYC verification and account activation.
+          </p>
+
+          <p><strong>Business challenges:</strong></p>
+
+          <ul>
+            <li>Customer abandonment during the application process.</li>
+            <li>Delays in KYC verification.</li>
+            <li>Manual follow-ups and limited status visibility.</li>
+          </ul>
+
+          <p><strong>Analysis focus:</strong> Current-state assessment,
+          gap identification and prioritised recommendations.</p>
+
+          <span class="tag">Gap Analysis</span>
+          <span class="tag">Process Improvement</span>
         </article>
+
         <article class="card">
           <h3>Business Performance Dashboard</h3>
-          <p>A project space for presenting performance indicators, trends and insights using Excel or Power BI.</p>
-          <p><strong>Focus:</strong> Data preparation, KPI reporting and actionable findings.</p>
-          <p class="muted">Add your completed dashboard and verified findings here.</p>
+
+          <p>
+            A project space for demonstrating how Excel or Power BI can
+            turn structured data into performance indicators, trends
+            and business insights.
+          </p>
+
+          <p><strong>Analysis focus:</strong> Data preparation,
+          KPI reporting and visualisation.</p>
+
+          <span class="tag">Excel</span>
+          <span class="tag">Power BI</span>
+
+          <p class="muted">
+            Add your completed dashboard and verified findings here.
+          </p>
         </article>
+
         <article class="card">
-          <h3>SQL Data Exploration</h3>
-          <p>A project space for demonstrating SQL queries to filter, summarise and analyse structured data.</p>
-          <p><strong>Focus:</strong> SELECT, WHERE, GROUP BY, joins and aggregations.</p>
-          <p class="muted">Add your dataset, queries and results when ready.</p>
+          <h3>SQL Data Analysis</h3>
+
+          <p>
+            A project space for demonstrating how SQL can be used to
+            retrieve, filter, group and analyse structured data.
+          </p>
+
+          <p><strong>Analysis focus:</strong> Data queries,
+          aggregations and business questions.</p>
+
+          <span class="tag">SQL</span>
+          <span class="tag">Data Analysis</span>
+
+          <p class="muted">
+            Add your actual SQL queries, dataset and results when ready.
+          </p>
         </article>
+
         <article class="card">
-          <h3>Process Improvement Case Study</h3>
-          <p>Document a business problem, map the current process, identify root causes and recommend measurable improvements.</p>
-          <p class="muted">Add a real or clearly labelled practice case study.</p>
+          <h3>Business Process Improvement</h3>
+
+          <p>
+            A case-study space to document a business problem,
+            assess the current process, identify improvement
+            opportunities and propose measurable actions.
+          </p>
+
+          <span class="tag">Business Analysis</span>
+          <span class="tag">Problem Solving</span>
         </article>
+
       </div>
     </section>
 
     <section id="experience">
       <h2>Professional Experience</h2>
+
       <div class="card">
         <h3>Senior Health Care Assistant</h3>
-        <p class="muted">Care sector · United Kingdom</p>
-        <p>Experience working in a structured, people-focused environment, following procedures, maintaining accurate records, communicating with colleagues and responding to changing needs.</p>
-        <p>I aim to transfer these strengths into business analysis through clear documentation, stakeholder communication and continuous improvement.</p>
+
+        <p class="muted">Health and social care | United Kingdom</p>
+
+        <p>
+          Experience in a structured, people-focused environment
+          requiring accurate record-keeping, communication,
+          following procedures, teamwork and responding to changing
+          operational needs.
+        </p>
+
+        <p>
+          These transferable skills support my interest in business
+          analysis, stakeholder communication, documentation and
+          continuous improvement.
+        </p>
+
+        <p class="muted">
+          Add your employer, dates and other relevant roles from your
+          CV to complete this section.
+        </p>
       </div>
-      <p class="muted">Add other relevant roles, employers and dates after checking your CV for accuracy.</p>
     </section>
 
     <section id="education">
       <h2>Education & Training</h2>
+
       <div class="card">
         <h3>MSc International Business</h3>
         <p>University of Dundee</p>
+
         <h3>BSc Marketing</h3>
         <p>University of Nigeria</p>
+
+        <h3>National Diploma in Marketing</h3>
+        <p>Federal Polytechnic Idah</p>
+
         <h3>Business Analytics Training</h3>
-        <p>Developing practical skills in Excel, Power BI, SQL and Gap Analysis.</p>
+        <p>
+          Developing practical skills in Excel, Power BI, SQL,
+          gap analysis and business decision-making.
+        </p>
       </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
+      <h2>Let's Connect</h2>
+
       <div class="card">
-        <p>I welcome opportunities to discuss Business Analyst and junior analytics roles.</p>
-        <p><strong>Email:</strong> Replace this text with your professional email address.</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">Add your LinkedIn profile URL</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/emmynuel94" target="_blank" rel="noopener noreferrer">github.com/emmynuel94</a></p>
+        <p>
+          I welcome opportunities to discuss Business Analyst,
+          Junior Business Analyst and analytics-related roles.
+        </p>
+
+        <div class="contact-links">
+
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/emmanuel-c-u-40b0bb1b1/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Connect on LinkedIn
+          </a>
+
+          <a
+            class="contact-link"
+            href="https://github.com/emmynuel94"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub Profile
+          </a>
+
+        </div>
+
+        <p class="muted">
+          Add your professional email address here before applying
+          for jobs.
+        </p>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2026 Emmanuel C. Ugwuanyi · Business Analytics Portfolio</p>
+    <p>© 2026 Emmanuel C. Ugwuanyi | Business Analytics Portfolio</p>
+    <p>Built with HTML and CSS using GitHub Pages.</p>
   </footer>
+
 </body>
 </html>
