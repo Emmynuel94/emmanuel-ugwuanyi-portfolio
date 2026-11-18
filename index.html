@@ -1,504 +1,515 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Emmanuel C. Ugwuanyi's Business Analytics portfolio showcasing business analysis, Excel, Power BI, SQL and gap analysis.">
-  <title>Emmanuel C. Ugwuanyi | Business Analyst Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emmanuel Chinaza Ugwuanyi | Business Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Emmanuel Chinaza Ugwuanyi, a UK-based Business Analyst focused on requirements, data visualisation, Agile delivery and process optimisation. SQL, Excel and Power BI case studies.">
+  <meta name="author" content="Emmanuel Chinaza Ugwuanyi">
+  <meta name="theme-color" content="#0F172A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Emmanuel Chinaza Ugwuanyi | Business Analyst Portfolio">
+  <meta property="og:description" content="Business Analyst | Requirement Analyst | Data Visualization | Agile and Process Optimization. SQL, Excel and Power BI case studies.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F172A'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%232DD4BF'%3EEU%3C/text%3E%3C/svg%3E">
 
-  <style>
-    :root {
-      --navy: #101c35;
-      --blue: #3563e9;
-      --light: #f4f7fc;
-      --text: #25324a;
-      --muted: #68758b;
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .nav {
-      background: var(--navy);
-      padding: 17px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .brand {
-      color: var(--white);
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 17px;
-    }
-
-    .nav-links a {
-      color: var(--white);
-      font-size: 0.9rem;
-    }
-
-    .hero {
-      background: var(--navy);
-      color: var(--white);
-      padding: 65px 7% 75px;
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      gap: 38px;
-    }
-
-    .profile {
-      width: 155px;
-      height: 155px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--white);
-      flex-shrink: 0;
-    }
-
-    .eyebrow {
-      color: #b9cbff;
-      font-size: 0.8rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.4rem);
-      line-height: 1.2;
-      margin: 8px 0;
-    }
-
-    .hero p {
-      color: #e0e7f5;
-      max-width: 650px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .btn-primary {
-      background: var(--blue);
-      color: var(--white);
-    }
-
-    .btn-secondary {
-      border: 1px solid #aebfe0;
-      color: var(--white);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 25px 24px 60px;
-    }
-
-    section {
-      padding: 30px 0;
-      scroll-margin-top: 20px;
-    }
-
-    h2 {
-      color: var(--navy);
-      font-size: 1.8rem;
-      margin: 0 0 18px;
-    }
-
-    h3 {
-      color: var(--navy);
-      margin-top: 0;
-    }
-
-    .intro {
-      max-width: 850px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--white);
-      padding: 24px;
-      border-radius: 14px;
-      border: 1px solid #e1e7f1;
-      box-shadow: 0 5px 18px rgba(16, 28, 53, 0.05);
-    }
-
-    .tag {
-      display: inline-block;
-      background: #eaf0ff;
-      color: #244ac0;
-      border-radius: 6px;
-      padding: 5px 10px;
-      margin: 4px 4px 4px 0;
-      font-size: 0.85rem;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
-    }
-
-    .contact-link {
-      display: inline-block;
-      padding: 10px 14px;
-      border: 1px solid #dbe3f1;
-      border-radius: 8px;
-      background: var(--white);
-      font-weight: bold;
-    }
-
-    footer {
-      background: var(--navy);
-      color: #e0e7f5;
-      text-align: center;
-      padding: 26px 7%;
-    }
-
-    @media (max-width: 650px) {
-      .hero-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .profile {
-        width: 125px;
-        height: 125px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav {
-        padding: 16px 5%;
-      }
-
-      main {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
-
-      .nav-links {
-        gap: 12px;
-      }
-    }
-  </style>
+  <!-- Apply the saved or system theme before the page paints (prevents a flash) -->
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "light" || saved === "dark") { theme = saved; }
+        else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) { theme = "dark"; }
+      } catch (e) {}
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <nav class="nav">
-    <a class="brand" href="#home">Emmanuel Ugwuanyi</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Emmanuel Ugwuanyi, back to top">
+        <span class="brand-mark" aria-hidden="true">EU</span>
+        <span class="brand-name">Emmanuel Ugwuanyi</span>
+      </a>
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-  <header class="hero" id="home">
-    <div class="hero-inner">
-
-      <img
-        class="profile"
-        src="./Github%20profile%20pix.jpeg"
-        alt="Emmanuel C. Ugwuanyi"
-        onerror="this.style.display='none'">
-
-      <div>
-        <div class="eyebrow">Business Analytics Portfolio</div>
-
-        <h1>Emmanuel C. Ugwuanyi</h1>
-
-        <p><strong>Business Analyst | Business Analytics</strong></p>
-
-        <p>
-          I use analytical thinking, structured problem-solving and
-          data-driven insights to understand business challenges,
-          identify process gaps and support better decisions.
-        </p>
-
-        <div class="buttons">
-          <a class="btn btn-primary" href="#projects">Explore My Projects</a>
-          <a class="btn btn-secondary" href="#contact">Contact Me</a>
-        </div>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path class="menu-lines" d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
-    <section id="about">
-      <h2>About Me</h2>
-
-      <p class="intro">
-        I am developing my Business Analytics expertise, with a focus on
-        turning business questions into structured analysis and practical
-        recommendations. My interests include business process analysis,
-        reporting, requirements analysis, gap analysis and continuous
-        improvement.
-      </p>
-
-      <p class="intro">
-        I bring experience from a people-focused professional environment
-        and am building practical technical skills to support evidence-based
-        business decisions.
-      </p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills & Tools</h2>
-
-      <div class="card">
-        <span class="tag">Microsoft Excel</span>
-        <span class="tag">Power BI</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Gap Analysis</span>
-        <span class="tag">Data Visualisation</span>
-        <span class="tag">Business Process Analysis</span>
-        <span class="tag">Requirements Analysis</span>
-        <span class="tag">Problem Solving</span>
-        <span class="tag">Reporting</span>
-        <span class="tag">Decision Support</span>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="grid">
-
-        <article class="card">
-          <h3>Microfinance Account Opening — Gap Analysis</h3>
-
-          <p>
-            A case study examining an account-opening process involving
-            registration, KYC verification and account activation.
-          </p>
-
-          <p><strong>Business challenges:</strong></p>
-
-          <ul>
-            <li>Customer abandonment during the application process.</li>
-            <li>Delays in KYC verification.</li>
-            <li>Manual follow-ups and limited status visibility.</li>
-          </ul>
-
-          <p><strong>Analysis focus:</strong> Current-state assessment,
-          gap identification and prioritised recommendations.</p>
-
-          <span class="tag">Gap Analysis</span>
-          <span class="tag">Process Improvement</span>
-        </article>
-
-        <article class="card">
-          <h3>Business Performance Dashboard</h3>
-
-          <p>
-            A project space for demonstrating how Excel or Power BI can
-            turn structured data into performance indicators, trends
-            and business insights.
-          </p>
-
-          <p><strong>Analysis focus:</strong> Data preparation,
-          KPI reporting and visualisation.</p>
-
-          <span class="tag">Excel</span>
-          <span class="tag">Power BI</span>
-
-          <p class="muted">
-            Add your completed dashboard and verified findings here.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>SQL Data Analysis</h3>
-
-          <p>
-            A project space for demonstrating how SQL can be used to
-            retrieve, filter, group and analyse structured data.
-          </p>
-
-          <p><strong>Analysis focus:</strong> Data queries,
-          aggregations and business questions.</p>
-
-          <span class="tag">SQL</span>
-          <span class="tag">Data Analysis</span>
-
-          <p class="muted">
-            Add your actual SQL queries, dataset and results when ready.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Business Process Improvement</h3>
-
-          <p>
-            A case-study space to document a business problem,
-            assess the current process, identify improvement
-            opportunities and propose measurable actions.
-          </p>
-
-          <span class="tag">Business Analysis</span>
-          <span class="tag">Problem Solving</span>
-        </article>
-
-      </div>
-    </section>
-
-    <section id="experience">
-      <h2>Professional Experience</h2>
-
-      <div class="card">
-        <h3>Senior Health Care Assistant</h3>
-
-        <p class="muted">Health and social care | United Kingdom</p>
-
-        <p>
-          Experience in a structured, people-focused environment
-          requiring accurate record-keeping, communication,
-          following procedures, teamwork and responding to changing
-          operational needs.
-        </p>
-
-        <p>
-          These transferable skills support my interest in business
-          analysis, stakeholder communication, documentation and
-          continuous improvement.
-        </p>
-
-        <p class="muted">
-          Add your employer, dates and other relevant roles from your
-          CV to complete this section.
-        </p>
-      </div>
-    </section>
-
-    <section id="education">
-      <h2>Education & Training</h2>
-
-      <div class="card">
-        <h3>MSc International Business</h3>
-        <p>University of Dundee</p>
-
-        <h3>BSc Marketing</h3>
-        <p>University of Nigeria</p>
-
-        <h3>National Diploma in Marketing</h3>
-        <p>Federal Polytechnic Idah</p>
-
-        <h3>Business Analytics Training</h3>
-        <p>
-          Developing practical skills in Excel, Power BI, SQL,
-          gap analysis and business decision-making.
-        </p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Let's Connect</h2>
-
-      <div class="card">
-        <p>
-          I welcome opportunities to discuss Business Analyst,
-          Junior Business Analyst and analytics-related roles.
-        </p>
-
-        <div class="contact-links">
-
-          <a
-            class="contact-link"
-            href="https://www.linkedin.com/in/emmanuel-c-u-40b0bb1b1/"
-            target="_blank"
-            rel="noopener noreferrer">
-            Connect on LinkedIn
-          </a>
-
-          <a
-            class="contact-link"
-            href="https://github.com/emmynuel94"
-            target="_blank"
-            rel="noopener noreferrer">
-            GitHub Profile
-          </a>
-
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Emmanuel Chinaza Ugwuanyi &middot; United Kingdom</p>
+          <h1 id="hero-title">Business Analyst turning business questions into <em>evidence-based decisions.</em></h1>
+          <p class="lead">I use requirements gathering, stakeholder engagement and tools like SQL, Excel and Power BI to understand business challenges, find opportunities and bridge business needs with practical, technology-driven solutions.</p>
+          <p class="focus-line">Requirement Analyst &middot; Data Visualization &middot; Agile &amp; Process Optimization</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-secondary" href="assets/documents/CV.pdf" target="_blank" rel="noopener">View CV</a>
+            <a class="btn btn-ghost" href="#contact">Contact me</a>
+          </div>
         </div>
 
-        <p class="muted">
-          Add your professional email address here before applying
-          for jobs.
-        </p>
+        <div class="hero-bento" aria-label="Profile highlights">
+          <figure class="tile tile-photo">
+            <img src="assets/images/emmanuel-ugwuanyi.jpg" width="720" height="960" alt="Portrait of Emmanuel Chinaza Ugwuanyi wearing a navy suit and white shirt">
+          </figure>
+          <div class="tile tile-status">
+            <span class="tile-label">Currently</span>
+            <p>Business Analyst at Amdari UK, and Team Leader at Care UK.</p>
+          </div>
+          <div class="tile tile-tools">
+            <span class="tile-label">Core tools</span>
+            <ul class="chips">
+              <li>SQL</li><li>Excel</li><li>Power BI</li><li>Jira</li>
+            </ul>
+          </div>
+          <div class="tile tile-open">
+            <span class="tile-label">Looking for</span>
+            <p>Business Analyst &amp; BI roles</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- PROJECTS (case-study first) -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">Selected case studies</p>
+          <h2 id="projects-title">Problem, approach, contribution, outcome.</h2>
+          <p class="section-intro">Two consulting projects that show how I move from messy data and open questions to insights a decision-maker can act on.</p>
+        </header>
+
+        <!-- Project 1 -->
+        <article class="case reveal" aria-labelledby="case1-title">
+          <div class="case-visual" role="img" aria-label="Illustration of the HR analytics workflow: Excel cleaning, SQL analysis and Power BI reporting, with two headline findings: 9 departures each in Engineering and Marketing, and Sales with the lowest average performance score of 4.00.">
+            <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <rect width="520" height="420" rx="22" class="v-bg"/>
+              <!-- pipeline -->
+              <g class="v-text" font-size="13" font-weight="600">
+                <rect x="28" y="28" width="132" height="44" rx="12" class="v-chip"/><text x="94" y="55" text-anchor="middle">Excel · clean</text>
+                <rect x="194" y="28" width="132" height="44" rx="12" class="v-chip"/><text x="260" y="55" text-anchor="middle">SQL · analyse</text>
+                <rect x="360" y="28" width="132" height="44" rx="12" class="v-chip"/><text x="426" y="55" text-anchor="middle">Power BI · report</text>
+              </g>
+              <path d="M162 50h30M328 50h30" class="v-line" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M186 44l7 6-7 6M352 44l7 6-7 6" class="v-line" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <!-- turnover bars -->
+              <text x="28" y="118" class="v-muted" font-size="12" font-weight="600" letter-spacing="1">HIGHEST EMPLOYEE TURNOVER</text>
+              <g class="v-text" font-size="14" font-weight="600">
+                <text x="28" y="156">Engineering</text>
+                <rect x="132" y="138" width="300" height="26" rx="8" class="v-bar"/>
+                <text x="448" y="157" font-weight="700">9</text>
+                <text x="28" y="204">Marketing</text>
+                <rect x="132" y="186" width="300" height="26" rx="8" class="v-bar"/>
+                <text x="448" y="205" font-weight="700">9</text>
+              </g>
+              <text x="28" y="236" class="v-muted" font-size="12">departures each</text>
+
+              <!-- performance tile -->
+              <rect x="28" y="262" width="464" height="130" rx="18" class="v-panel"/>
+              <text x="52" y="296" class="v-muted" font-size="12" font-weight="600" letter-spacing="1">LOWEST AVERAGE PERFORMANCE SCORE</text>
+              <text x="52" y="352" class="v-big" font-size="52" font-weight="700" font-family="Georgia, 'Times New Roman', serif">4.00</text>
+              <text x="162" y="350" class="v-text" font-size="18" font-weight="600">Sales department</text>
+            </svg>
+          </div>
+
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="tag tag-type">Consulting project</span>
+              <span class="tag">HR analytics</span>
+              <span class="tag">SQL &middot; Excel &middot; Power BI</span>
+            </div>
+            <h3 id="case1-title">Employee Retention &amp; Performance Analytics</h3>
+
+            <dl class="story">
+              <div>
+                <dt>Objective</dt>
+                <dd>Analyse employee data to understand workforce performance, employee turnover and compensation structures. The goal was to uncover the causes of attrition, evaluate departmental performance and assess salary fairness, so HR and leadership could improve retention, performance management and workforce planning.</dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>I analysed the employee data for trends affecting retention, departmental performance and salary distribution. I cleaned and validated the datasets, ran exploratory analysis, investigated turnover, compared performance across departments and assessed compensation patterns. I used SQL to analyse the data, built visualisations and dashboards, and presented recommendations to support HR decisions.</dd>
+              </div>
+              <div>
+                <dt>Tools &amp; approach</dt>
+                <dd>
+                  <ul class="chips chips-sm">
+                    <li>SQL</li><li>Microsoft Excel</li><li>Power BI</li>
+                  </ul>
+                  Data cleaning and validation in Excel, extraction and querying in SQL, exploratory data analysis, attrition analysis, departmental performance evaluation, salary analysis, KPI development and dashboard creation.
+                </dd>
+              </div>
+            </dl>
+
+            <div class="outcome">
+              <h4>Outcome &amp; key findings</h4>
+              <p>Delivered a SQL-based HR analytics project for a client, turning employee data into insights to support workforce planning and management decisions.</p>
+              <ul class="findings">
+                <li><strong>Engineering and Marketing</strong> recorded the highest employee turnover, with 9 departures each.</li>
+                <li><strong>Sales</strong> had the lowest average performance score (4.00).</li>
+                <li>Departmental salary averages differed, and the employees with the highest absence levels were highlighted.</li>
+                <li>SQL queries extracted, joined and aggregated data across multiple HR tables.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="case case-reverse reveal" aria-labelledby="case2-title">
+          <div class="case-visual" role="img" aria-label="Illustrative wireframe of a sales performance dashboard layout with filters, five metric tiles for revenue, profit, profit margin, quantity sold and cost of goods sold, a month-on-month trend chart and top five and bottom five rankings. This is a layout illustration, not a screenshot.">
+            <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+              <rect width="520" height="420" rx="22" class="v-bg"/>
+              <!-- slicers -->
+              <g class="v-chip-outline">
+                <rect x="28" y="24" width="96" height="28" rx="14"/>
+                <rect x="132" y="24" width="96" height="28" rx="14"/>
+                <rect x="236" y="24" width="96" height="28" rx="14"/>
+              </g>
+              <g class="v-muted" font-size="11" font-weight="600" text-anchor="middle">
+                <text x="76" y="42">Month</text><text x="180" y="42">Drug</text><text x="284" y="42">Customer</text>
+              </g>
+              <!-- KPI tiles -->
+              <g class="v-text" font-size="11" font-weight="700" text-anchor="middle">
+                <rect x="28" y="68" width="86" height="58" rx="12" class="v-panel"/><rect x="40" y="80" width="30" height="5" rx="2.5" class="v-accent"/><text x="71" y="112">Revenue</text>
+                <rect x="122" y="68" width="86" height="58" rx="12" class="v-panel"/><rect x="134" y="80" width="30" height="5" rx="2.5" class="v-accent"/><text x="165" y="112">Profit</text>
+                <rect x="216" y="68" width="86" height="58" rx="12" class="v-panel"/><rect x="228" y="80" width="30" height="5" rx="2.5" class="v-accent"/><text x="259" y="112">Margin</text>
+                <rect x="310" y="68" width="86" height="58" rx="12" class="v-panel"/><rect x="322" y="80" width="30" height="5" rx="2.5" class="v-accent"/><text x="353" y="112">Quantity</text>
+                <rect x="404" y="68" width="88" height="58" rx="12" class="v-panel"/><rect x="416" y="80" width="30" height="5" rx="2.5" class="v-accent"/><text x="448" y="112">COGS</text>
+              </g>
+              <!-- trend chart -->
+              <rect x="28" y="142" width="296" height="250" rx="16" class="v-panel"/>
+              <text x="46" y="168" class="v-muted" font-size="11" font-weight="600" letter-spacing="1">MONTH-ON-MONTH TREND</text>
+              <path d="M46 342h262M46 296h262M46 250h262M46 204h262" class="v-grid" stroke-width="1"/>
+              <path d="M52 320 L96 292 L140 304 L184 262 L228 276 L272 224 L304 232" class="v-line-main" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M52 336 L96 322 L140 326 L184 304 L228 312 L272 286 L304 290" class="v-line-alt" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- rankings -->
+              <rect x="336" y="142" width="156" height="120" rx="16" class="v-panel"/>
+              <text x="352" y="166" class="v-muted" font-size="11" font-weight="600" letter-spacing="1">TOP 5</text>
+              <g class="v-accent"><rect x="352" y="178" width="120" height="9" rx="4.5"/><rect x="352" y="196" width="96" height="9" rx="4.5"/><rect x="352" y="214" width="78" height="9" rx="4.5"/><rect x="352" y="232" width="62" height="9" rx="4.5"/></g>
+              <rect x="336" y="272" width="156" height="120" rx="16" class="v-panel"/>
+              <text x="352" y="296" class="v-muted" font-size="11" font-weight="600" letter-spacing="1">BOTTOM 5</text>
+              <g class="v-bar-soft"><rect x="352" y="308" width="64" height="9" rx="4.5"/><rect x="352" y="326" width="50" height="9" rx="4.5"/><rect x="352" y="344" width="40" height="9" rx="4.5"/><rect x="352" y="362" width="30" height="9" rx="4.5"/></g>
+            </svg>
+            <p class="visual-note">Layout illustration, not a screenshot of the dashboard.</p>
+          </div>
+
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="tag tag-type">Consulting project</span>
+              <span class="tag">Sales analytics</span>
+              <span class="tag">Power BI &middot; DAX</span>
+            </div>
+            <h3 id="case2-title">Novamed Solution: Sales Performance Dashboard</h3>
+
+            <dl class="story">
+              <div>
+                <dt>Objective</dt>
+                <dd>Build an interactive sales performance dashboard covering revenue, profit, profit margin, quantity sold and cost of goods sold (COGS). It needed to track monthly performance, identify top and bottom performing drugs and customers, and show their contribution to overall sales.</dd>
+              </div>
+              <div>
+                <dt>My contribution</dt>
+                <dd>I analysed the sales data to evaluate overall performance and calculated the key metrics. I built month-on-month comparisons for revenue and profit, identified the top five and bottom five drugs and customers and assessed their contribution to total sales. I then built the interactive Power BI dashboard with dynamic visuals and slicers so users can explore the data themselves.</dd>
+              </div>
+              <div>
+                <dt>Tools &amp; approach</dt>
+                <dd>
+                  <ul class="chips chips-sm">
+                    <li>Power BI</li><li>Power Query</li><li>DAX</li><li>Microsoft Excel</li>
+                  </ul>
+                  Data cleaning and transformation, data modelling, KPI development, profit margin calculation, month-on-month analysis, top and bottom ranking, percentage contribution analysis, customer segmentation and slicer-based filtering.
+                </dd>
+              </div>
+            </dl>
+
+            <div class="outcome">
+              <h4>Outcome</h4>
+              <p>Delivered an interactive Power BI dashboard giving a consolidated view of revenue, profit, profit margins, COGS and sales volume.</p>
+              <ul class="findings">
+                <li>Enabled month-by-month performance comparison.</li>
+                <li>Identified top and bottom performing drugs and customers and their share of overall sales.</li>
+                <li>Improved visibility of sales performance, supporting decisions on growth opportunities and underperforming areas.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">About</p>
+          <h2 id="about-title">From business operations to data-informed analysis.</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="tile tile-story reveal">
+            <p>I am a Business Analyst with a background in business operations, data analysis and process improvement. My career has been driven by an interest in understanding business challenges, solving problems and using data and technology to improve how organisations operate.</p>
+            <p>I have built skills in requirements gathering, stakeholder engagement, SQL, Excel and Power BI, and I am continuing to develop my expertise in Agile and digital transformation. My ambition is to grow into a well-rounded Business Analyst who bridges business and technology and delivers solutions that create measurable value.</p>
+          </div>
+
+          <ul class="strengths reveal" aria-label="Key strengths">
+            <li class="tile"><span class="num" aria-hidden="true">01</span><strong>Analytical and problem-solving skills</strong></li>
+            <li class="tile"><span class="num" aria-hidden="true">02</span><strong>Stakeholder engagement and communication</strong></li>
+            <li class="tile"><span class="num" aria-hidden="true">03</span><strong>Data-driven decision-making</strong></li>
+            <li class="tile"><span class="num" aria-hidden="true">04</span><strong>Business process improvement</strong></li>
+            <li class="tile"><span class="num" aria-hidden="true">05</span><strong>Adaptability and continuous learning</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">Experience</p>
+          <h2 id="experience-title">Where I have applied analysis in practice.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job-when">2026 &ndash; present</div>
+            <div class="job-main">
+              <h3>Business Analyst <span class="job-sub">(Internship)</span></h3>
+              <p class="job-org">Amdari UK</p>
+              <ul>
+                <li>Work with business stakeholders and project teams to gather, analyse and document requirements, keeping proposed solutions aligned with organisational objectives.</li>
+                <li>Analyse existing workflows to identify inefficiencies and recommend improvements to operational performance.</li>
+                <li>Apply Excel, SQL and Power BI to identify trends, generate insights and support evidence-based decisions.</li>
+                <li>Produce process maps, business documentation and reports that turn business needs into clear requirements for technical and non-technical stakeholders.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job-when">Dec 2023 &ndash; present</div>
+            <div class="job-main">
+              <h3>Team Leader</h3>
+              <p class="job-org">Mountbatten Grange &middot; Care UK</p>
+              <ul>
+                <li>Analyse operational challenges, identify recurring issues and recommend process improvements to raise efficiency and service quality.</li>
+                <li>Gather and clarify requirements through engagement with residents, families, multidisciplinary teams and management.</li>
+                <li>Translate stakeholder needs into documented care plans with clearly defined expectations and outcomes.</li>
+                <li>Review processes, identify operational gaps and support continuous improvement and compliance.</li>
+                <li>Monitor team performance, resource allocation and operational outcomes to inform decisions.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job-when">Nov 2022 &ndash; Aug 2023</div>
+            <div class="job-main">
+              <h3>Business Analyst</h3>
+              <p class="job-org">Derac Enterprise &middot; Remote, consultancy basis</p>
+              <ul>
+                <li>Investigated business needs by gathering and analysing information to understand operational challenges.</li>
+                <li>Reviewed reporting processes and identified inefficiencies, information gaps and opportunities for automation.</li>
+                <li>Engaged stakeholders to clarify requirements, understand priorities and validate business needs.</li>
+                <li>Analysed performance trends and provided evidence-based recommendations.</li>
+                <li>Cleaned and validated datasets to improve accuracy and reliability.</li>
+                <li>Developed reports and visualisations in SQL, Power BI and Tableau to communicate insights.</li>
+              </ul>
+              <p class="job-note">Earlier at Derac Enterprise: Business Support Officer (Sep 2021 &ndash; Nov 2022) and Sales Executive (Sep 2019 &ndash; Aug 2021).</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">Skills &amp; tools</p>
+          <h2 id="skills-title">What I bring to a project.</h2>
+        </header>
+
+        <div class="skills-grid">
+          <div class="tile tile-tools-big reveal">
+            <h3>Tools &amp; technologies</h3>
+            <ul class="chips chips-lg">
+              <li>SQL</li><li>Microsoft Excel</li><li>Power BI</li><li>Power Query</li><li>DAX</li><li>Tableau</li><li>Jira</li><li>Microsoft Office</li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Requirements &amp; analysis</h3>
+            <ul class="skill-list">
+              <li>Requirements gathering and elicitation</li>
+              <li>Stakeholder engagement and management</li>
+              <li>Business process analysis</li>
+              <li>Business requirements documentation</li>
+              <li>User needs analysis</li>
+              <li>Problem solving</li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Data &amp; reporting</h3>
+            <ul class="skill-list">
+              <li>Data analysis</li>
+              <li>Data cleaning and validation</li>
+              <li>Data visualisation</li>
+              <li>Reporting</li>
+              <li>CRM systems</li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Process &amp; delivery</h3>
+            <ul class="skill-list">
+              <li>Process mapping and improvement</li>
+              <li>Agile methodologies and Scrum</li>
+              <li>SDLC</li>
+              <li>Project coordination</li>
+              <li>Change management</li>
+              <li>Continuous improvement</li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Ways of working</h3>
+            <ul class="skill-list">
+              <li>Analytical and critical thinking</li>
+              <li>Communication</li>
+              <li>Cross-functional collaboration</li>
+              <li>Teamwork and adaptability</li>
+              <li>Time management</li>
+              <li>Attention to detail</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker">Education &amp; credentials</p>
+          <h2 id="education-title">Formal study and professional development.</h2>
+        </header>
+
+        <div class="edu-grid">
+          <div class="tile reveal">
+            <h3>Education</h3>
+            <ul class="edu-list">
+              <li><strong>MSc International Business</strong><span>University of Dundee &middot; 2023 &ndash; 2024</span></li>
+              <li><strong>BSc Marketing</strong><span>University of Nigeria (Enugu Campus) &middot; 2016 &ndash; 2019</span></li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Analytics certifications</h3>
+            <ul class="edu-list">
+              <li><strong>Advanced Business Analytics Certification</strong><span>10Alytics &middot; 2026</span></li>
+              <li><strong>Business Analytics Essentials</strong><span>Cisco &middot; 2026</span></li>
+            </ul>
+          </div>
+
+          <div class="tile reveal">
+            <h3>Further development</h3>
+            <ul class="edu-list">
+              <li><strong>Introduction to Project Management</strong><span>2025</span></li>
+              <li><strong>Project Lifecycle, Information Sharing and Risk Management</strong><span>2025</span></li>
+              <li><strong>Chartered Management Institute (CMI)</strong><span>2024</span></li>
+              <li><strong>Health and Social Care, NVQ Level 4</strong><span>2024 &ndash; 2025</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV -->
+    <section class="section cv-band" id="cv" aria-labelledby="cv-title">
+      <div class="wrap cv-inner reveal">
+        <div>
+          <p class="kicker">Curriculum vitae</p>
+          <h2 id="cv-title">The full picture in one document.</h2>
+          <p class="section-intro">Roles, skills, qualifications and professional development in one document.</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="assets/documents/CV.pdf" target="_blank" rel="noopener">View CV</a>
+          <a class="btn btn-secondary-onband" href="assets/documents/CV.pdf" download="Emmanuel-Ugwuanyi-CV.pdf">Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="reveal">
+          <p class="kicker">Contact</p>
+          <h2 id="contact-title">Let&rsquo;s talk about a Business Analyst role.</h2>
+          <p class="section-intro">I am looking for employment in Business Analyst, Junior or Associate Business Analyst, Business Intelligence, IT, Digital, Process and Systems Analyst roles, and business process improvement work.</p>
+          <ul class="contact-links">
+            <li><a href="mailto:Emmynuel94@gmail.com"><span class="cl-label">Email</span><span class="cl-value">Emmynuel94@gmail.com</span></a></li>
+            <li><a href="https://www.linkedin.com/in/emmanuel-c-u-40b0bb1b1" target="_blank" rel="noopener"><span class="cl-label">LinkedIn</span><span class="cl-value">emmanuel-c-u-40b0bb1b1</span></a></li>
+            <li><a href="https://github.com/Emmynuel94" target="_blank" rel="noopener"><span class="cl-label">GitHub</span><span class="cl-value">github.com/Emmynuel94</span></a></li>
+          </ul>
+        </div>
+
+        <form class="tile contact-form reveal" id="contact-form" action="https://formspree.io/f/mzerrdro" method="POST">
+          <h3>Send a message</h3>
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Your email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="New message from your portfolio">
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-primary" type="submit" id="cf-submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2026 Emmanuel C. Ugwuanyi | Business Analytics Portfolio</p>
-    <p>Built with HTML and CSS using GitHub Pages.</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year">2026</span> Emmanuel Chinaza Ugwuanyi</p>
+      <p><a href="#top">Back to top &uarr;</a></p>
+    </div>
   </footer>
 
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
